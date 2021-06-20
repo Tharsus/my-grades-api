@@ -1,8 +1,8 @@
 import express from 'express';
 
-import healthCheckRoute from './healthCheckRoute.js';
+import healthRoute from './healthRoute.js';
 
 const router = express.Router();
-router.use('/health-check', healthCheckRoute);
+router.use('/health', healthRoute);
 
 export default router;
