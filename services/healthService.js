@@ -1,9 +1,12 @@
+import mongoose from '../initializers/mongoose.js';
+
 export default {
   health() {
     const health = {
-      uptime: process.uptime(),
+      message: 'listening',
       isHealthy: true,
-      message: 'OK',
+      uptime: process.uptime(),
+      db: mongoose.STATES[mongoose.connection.readyState],
       currentTime: new Date().toLocaleString(),
     };
 
